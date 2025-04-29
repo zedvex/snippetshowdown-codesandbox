@@ -1,0 +1,112 @@
+.snippet-list {
+  padding: 1rem 0;
+}
+
+.snippet-list h1 {
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.language-filter,
+.search-input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.language-filter {
+  min-width: 150px;
+}
+
+.search-input {
+  flex: 1;
+}
+
+/* Snippets Container */
+.snippets-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Snippet Card */
+.snippet-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.snippet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.snippet-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.snippet-info {
+  margin-bottom: 1rem;
+}
+
+.snippet-preview {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  flex: 1;
+}
+
+.snippet-preview code {
+  font-family: 'Fira Code', monospace;
+  white-space: pre-wrap;
+  display: block;
+}
+
+/* Create button */
+.create-button {
+  display: block;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.create-button:hover {
+  background-color: var(--primary-dark);
+  text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+  
+  .snippets-container {
+    grid-template-columns: 1fr;
+  }
+} 

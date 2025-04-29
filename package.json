@@ -1,5 +1,18 @@
 {
+  "name": "snippet-showdown",
+  "version": "0.1.0",
+  "description": "A code snippet sharing platform for web development challenges",
+  "type": "module",
+  "scripts": {
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install"
+  },
   "dependencies": {
     "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
   }
 }
