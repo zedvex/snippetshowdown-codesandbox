@@ -1,0 +1,6 @@
+{
+  "previews": {
+    "frontend": { "start": "npm run dev --workspace frontend", "port": 5173 },
+    "backend":  { "start": "npm run start --workspace backend", "port": 4000 }
+  }
+}
